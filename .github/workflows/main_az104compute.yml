@@ -74,8 +74,8 @@ jobs:
         uses: azure/webapps-deploy@v3
         id: deploy-to-webapp-testing
         with:
-          app-name: 'az104compute-testing'
-          slot-name: 'Testing'
+          app-name: 'az104compute'
+          slot-name: 'testing'
           
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v3
