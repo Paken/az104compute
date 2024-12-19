@@ -7,7 +7,6 @@ name: Build and deploy Python app to Azure Web App - az104compute
 on:
   push:
     branches:
-      - main
       - test
   workflow_dispatch:
 
@@ -76,11 +75,4 @@ jobs:
         with:
           app-name: 'az104compute'
           slot-name: 'testing'
-          
-      - name: 'Deploy to Azure Web App'
-        uses: azure/webapps-deploy@v3
-        id: deploy-to-webapp-production
-        with:
-          app-name: 'az104compute'
-          slot-name: 'Production'
           
